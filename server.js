@@ -19,6 +19,7 @@ var exphbs = require ("express-handlebars");
 app.engine("handlebars", exphbs({defaultLayout: "main"})
 );
 app.set("view engine", "handlebars");
+
 // mongoose connection
 mongoose.connect("mongodb://localhost/scraped_news");
 var db = mongoose.connection;
