@@ -5,6 +5,8 @@ var logger = require("morgan");
 var express = require("express");
 var app = express();
 
+
+
 // setting up logger
 app.use(logger("dev"));
 app.use(
@@ -16,8 +18,7 @@ app.use(
 app.use(express.static(process.cwd() + "/public"));
 
 var exphbs = require ("express-handlebars");
-app.engine("handlebars", exphbs({defaultLayout: "main"})
-);
+app.engine("handlebars", exphbs({defaultLayout: "main"}));
 app.set("view engine", "handlebars");
 
 // mongoose connection
@@ -30,7 +31,10 @@ db.once("open", function() {
 });
 
 // set up PORT for 3000
+var routes = require("./controller/controller.js");
+app.use("/", routes);
 var port = process.env.PORT || 3000;
 app.listen(port, function(){
     console.log("Listening on PORT " + port);
 });
+
