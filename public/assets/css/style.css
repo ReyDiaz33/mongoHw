@@ -1,4 +1,4 @@
-/* body {
+body {
     background-size: 600px;
     font-family: "Oswald", sans-serif;
     font-size: 16px;
@@ -19,8 +19,8 @@
     background-color: #635f60;
   }
   #nameComment {
-    /*border-bottom: 2px solid #ec407a;*/
-    /* font-weight: bold;
+    border-bottom: 2px solid #ec407a;
+    font-weight: bold;
     background: #635f60;
     color: white;
   }
@@ -35,5 +35,5 @@
     color: #635f60;
   }
   .topnav {
-    background-color: #635f60;
-  } */ */
+    background-color: lightblue;
+  }
