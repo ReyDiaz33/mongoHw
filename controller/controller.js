@@ -7,8 +7,8 @@ var path = require("path");
 var request = require("request");
 var cheerio = require("cheerio");
 
-var Comment = require(path.join(__dirname, "../models/Comment"));
-var Article = require(path.join(__dirname, "../models/Article"));
+var Comment = require(path.join(__dirname, "../models/comment.js"));
+var Article = require(path.join(__dirname, "../models/article.js"));
 
 router.get("/", function(req, res) {
   res.redirect("/articles");
